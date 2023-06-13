@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janata Garage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+<style>
+
+
+
+.back {
+    height:1vh;
+   
+}
+#HOME{
+    margin:0px 0px;
+    width:100%;
+}
+.front{
+    position:absolute;
+    top:0px;
+    width:100%;
+    z-index: 10000;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    background-color:rgb(58, 56, 56);
+    text-align: center;
+    z-index: 10000;
+}
+.ul{
+    display: inline;
+}
+.li{
+    padding: 30px;
+    list-style: none;
+    display: inline;
+}
+.li a{
+    text-decoration: none;
+    
+    color: white;
+}
+.li a:hover{
+    color:rgba(212, 207, 209, 0.363);
+}
+#li-img{
+    margin-top:5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    position: relative;
+    top:7px;
+}
+.login{
+    background-color:rgb(58, 56, 56);
+    border: none;
+}
+.login a{
+    text-decoration: none;  
+    color: white;
+    font-size: 15px;
+}
+.login a:hover{
+    color:rgba(212, 207, 209, 0.563);
+}
+.back img{
+    width:100%;
+    position: absolute;
+    top:0px;
+}
+.content{
+    height:740px;
+    text-align:center;
+    color:white;
+    /* margin: 200px ; */
+    background-color:rgba(0, 0, 0, 0.363);
+}
+#logo2{
+  margin-top:100px; 
+  margin-bottom:-33px; 
+  height:100px;
+  width:100px;
+  border: 3px solid white;
+}
+.content h1{
+    padding-top: 15px;
+}
+.content img{
+   margin-top:350px;
+    height:50px;
+
+    background-color:rgba(333,333,333,0.5);
+    border-radius: 10px;
+}
+#SERVICES{
+    height:650px;
+    margin:0px 0px;
+    background-color: black;
+    color: white;
+    text-align:center;
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    font-family: 'Hahmlet', serif;
+
+}
+.service h1{
+    padding-top: 70px;
+    font-size: 50px;
+    height: 80px;
+    margin: 0px;
+}
+.container{
+    width:70%;
+    display:grid;
+    /* margin:auto; */
+    grid-template-columns: 350px 350px 350px;
+    margin: 0px 250px;
+
+}
+.cards{
+    height:200px;
+    width:200px;
+    border: 3px solid white;
+    border-radius: 100px;
+    margin:10px 80px ;
+}
+.cards h2,p{
+    text-align:center;
+    margin:10px 80px ;
+    height: 40px;
+    font-size: 20px;
+}
+
+#OUR_WORK{
+    height:800px;
+ text-align:center;
+
+ /* font-family: 'Open Sans Condensed', sans-serif; */
+ /* font-family: 'Hahmlet', serif; */
+
+}
+#OUR_WORK p{
+ margin: 40px 70px;
+ color:rgb(68, 68, 68);
+
+}
+#images{
+    margin: auto;
+    display: grid;
+    width: 1200px;;
+    height:600px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 3px solid blue; */
+    /* grid- */
+}
+.imgs{
+    /* border: 2px solid black; */
+    height:300px ;
+    width:400px;
+    margin: 0px;
+}
+#ABOUT_US{
+    background: url('bg-3.jpg');
+    height: 650px;
+    width:100%;
+    margin: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.text{
+    background-color:white;
+    position: relative;
+    top:50px;
+    width: 50%;
+    height: 500px;
+    margin:  50px auto;
+    text-align: center;
+    padding-top:50px;
+}
+.text h1{
+    margin-bottom:40px;
+    /* text-decoration: underline; */
+}
+#CONTACT{
+    background: url('bg-4.jpg');
+    height: 900px;
+    /* align-items: center; */
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.contactus{
+    position: relative;
+    top:100px;
+    margin: auto;
+    padding-top:100px;
+    background-color: rgb(231, 223, 213);
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    width: 800px;
+    height: 700px;
+    grid-template-areas:'h1 h1' 'address form ';
+}
+.contactus h1{
+    text-align: center;
+    padding-top:25px;
+    grid-area: h1;
+}
+.contactus form{
+    grid-area: form;
+    font-size: 25px;
+    color:rgb(107, 104, 104);
+
+}
+.contactus form input{
+    padding: 5px;
+    width:350px;
+    margin-bottom:10px;
+}
+.address p
+{
+    width:250px;
+    text-align:left;
+    grid-area: address;
+    margin-left: 50px;
+    color:rgb(107, 104, 104);
+
+    /* font-size: 20px; */
+}
+.btn{
+    background-color:black;
+    color:white;
+    width:380px;
+    height: 40px;
+    /* z-index: 100000000; */
+
+}
+.btn:hover{
+    cursor: pointer;
+    background-color:aliceblue;
+    color: black;
+}
+.footer{
+    font-family: 'Baloo 2', cursive;
+    height: 100px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    font-size: 20px;
+}
+.line1{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.line2{
+    padding: -4px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+</style>
+
+</head>
+
+<body>
+    <div id="total">
+        <div class="back">
+            <img id="backimg1" src="car-bg1.jpg" alt="">
+        </div>
+    </div>
+    <div class="front">
+        <div id="HOME">
+            <header class="navbar">
+                <ul class="ul">
+                    <li class="li"><a href="#HOME">HOME</a></li>
+                    <li class="li"><a href="#SERVICES">SERVICES</a></li>
+                    <li class="li"><a href="#OUR_WORK">OUR WORK</a></li>
+                    <li class="li"><a href="#ABOUT_US">ABOUT US</a></li>
+                    <li class="li"><a href="#CONTACT">CONTACT</a></li>
+                    <li class="li"><a href="#BOOK ONLINE"></a></li>
+                </ul>
+                <button class="login">
+                    <img src="login.jpg" alt="" id="li-img">
+                    <a href=""> Log In</a>
+                </button>
+            </header>
+            <div class="content">
+                <img id="logo2" src="logo2.png" alt="">
+                <h1>
+                    RAMYA'S &nbsp; GARAGE
+                </h1>
+                <h3>VINTAGE CAR SPECIALIST</h3>
+                <img src="vector app logos.png" alt="">
+            </div>
+        </div>
+        <div id="SERVICES" class="service">
+            <!-- <img src="Services.png" alt=""> -->
+            <h1>OUR SERVICES</h1>
+            <div class="container">
+                <div class="pack">
+                    <img src="card1.png" alt="" class="cards">
+                    <h2>REPAIRS</h2>
+                    <p>General Repairs,<br>
+                        Specialist Repairs<br>
+                        & Vintage Parts</p>
+                </div>
+                <div class="pack">
+                    <img src="card2.png" alt="" class="cards">
+                    <h2>UPHOLSTERY</h2>
+                    <p>
+                        A Range of Fabrics, <br>
+                        Including Vintage Leathers,<br>
+                        & Wide Variety of Colors
+                    </p>
+                </div>
+                <div class="pack">
+                    <img src="card3.png" alt="" class="cards">
+                    <h2>PAINTWORK</h3>
+                        <p>Spray paint, <br>
+                            Custom Stencilling &<br>
+                            Variety of Custom Made Artwork</p>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="OUR_WORK">
+            <h1>OUR WORK</h1>
+            <p>A collection of cars we've renovated with passion
+
+                </p>
+            <div id="images">
+                <img src="img1.jpg" alt="" class="imgs">
+                <img src="img2.jpg" alt="" class="imgs">
+                <img src="img3.jpg" alt="" class="imgs">
+                <img src="img4.jpg" alt="" class="imgs">
+                <img src="img5.jpg" alt="" class="imgs">
+                <img src="img6.jpg" alt="" class="imgs">
+</div>
+        </div>
+        <div id="ABOUT_US">
+            <div class="text">
+                <h1>
+                    ABOUT US
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt sunt labore, luptates nisi
+                    laboriosam est quidem, aliquid at autem veniam non debitis fugiat illo alias praesentium vitae? Qui,
+                    fugiat ex labore ipsam eum exercitationem repellendus nam ipsa velit vero cumque optio. Suscipit
+                    libero nobis nesciunt eveniet voluptas deleniti officia totam porro natus molestias atque excepturi
+                    rerum quasi, debitis, dignissimos ratione nihil, sint cumque doloremque nulla nisi saepe facere hic.
+                    Qui soluta culpa ad? Deserunt autem provident hic quod facere veniam officiis fuga totam culpa,
+                    necessitatibus reprehenderit commodi ducimus cupiditate velit pariatur assumenda cum temporibus.
+                    Nemo illum atque assumenda molestias sapiente enim, beatae nihil.
+                </p>
+            </div>
+        </div>
+        <div id="CONTACT">
+            <div class="contactus">
+                <h1>FIND US</h1>
+                <form action="">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" name="fname"><br>
+
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" name="lname"> <br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email"> <br>
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" name="subject"> <br>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" id="" cols="50" rows="10"></textarea>
+                    <button class="btn">
+                        Submit
+                    </button>
+
+                </form>
+                <div class="address">
+                    <p>
+                    500 Terry Francois Street
+                </p>
+                    <p>
+                        San Francisco, CA 94158
+                    </p>
+                    <p>
+
+                        info@mysite.com
+                    </p>
+                    <p>
+                    Tel: 123-456-7890
+                </p>
+                    <p>
+                        OPENING HOURS:
+                    </p>
+                    <p>
+                    Mon - Fri: 7am - 10pm <br>
+
+                    ​​Saturday: 8am - 10pm <br>
+
+                    ​Sunday: 8am - 11pm <br>
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+           <div class="line1">
+               Home-Services-Our work-About us-Contact
+           </div>
+           <div class="line2">
+               @copyright by RAMYA'S GARAGE
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>

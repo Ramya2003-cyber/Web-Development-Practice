@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imdb</title>
+    <link rel="stylesheet" href="imdb.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap4.5.2jsbootstrap.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul class="left-side-navbar">
+            <li>
+                <img src="images/icon.png">
+            </li>
+            <li class="searchLi">
+                <div class="search-container">
+                    <input type="text" placeholder="Search imdb...">
+                    <div class="search"></div>
+                </div>
+            </li>
+
+        </ul>
+        <ul class="right-side-navbar">
+
+            <li class="active">
+                <a href="#">
+                    <i class='bx bx-home icon'></i>
+                    <i class='bx bxs-home activeIcon'></i>
+                </a>
+            </li>
+            <li>
+                <a href="./profile.html">
+                    <i class='bx bx-user icon'></i>
+                    <i class='bx bxs-user activeIcon'></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart icon'></i>
+                    <i class='bx bxs-heart activeIcon'></i>
+                </a>
+            </li>
+            <li>
+                <a href="#menu-bar" class="nav-img">
+
+                    <i onclick="openNav()" class='bx bx-menu icon'></i>
+                    <i class='bx bxs-menu activeIcon'></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <i class='bx bxs-cog activeIcon'></i>
+                </a>
+            </li>
+            <li class="signIn">
+                <a href="#" id="signin"><span onclick="openLogIn()">Sign In</span></a>
+            </li>
+
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <hr class="line">
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <div class="grid-item" id="Movies">
+                <h2>
+                    Movies
+                </h2>
+
+                <a href="#">Release Calendar</a>
+                <a href="#">Top 250 Movies</a>
+                <a href="#">Most Popular Movies</a>
+                <a href="#">Browse Movies by Genre</a>
+                <a href="#">Top Box Office</a>
+                <a href="#">Showtimes & Tickets</a>
+                <a href="#">Movie News</a>
+                <a href="#">India Movie Spotlight</a>
+
+            </div>
+            <div id="tvshows" class="grid-item">
+                <li>
+                    <h2>TV Shows</h2>
+                </li>
+
+
+
+                <a href="#">What's on TV & Streaming</a>
+                <a href="#">Top 250 TV Shows</a>
+                <a href="#">Most Popular TV Shows</a>
+                <a href="#">Browse TV Shows by Genre</a>
+                <a href="#">TV News</a>
+                <a href="#">India TV Spotlight</a>
+            </div>
+            <div id="AwardsandEvents" class="grid-item">
+                <li>
+                    <h2>
+                        Awards & Events
+                    </h2>
+                </li>
+                <a href="#">Oscars</a>
+                <a href="#">SXSW</a>
+                <a href="#">Star Wars Celebration</a>
+                <a href="#">Cannes</a>
+                <a href="#">STARmeter Awards</a>
+                <a href="#">Awards Central</a>
+                <a href="#">Festival Central</a>
+                <a href="#">All Events</a>
+            </div>
+            <div id="celebs" class="grid-item">
+                <li>
+                    <h2>
+                        Celebs
+                    </h2>
+                </li>
+                <a href="#">Born Today</a>
+                <a href="#">Most Popular Celebs</a>
+                <a href="#">Celebrity News</a>
+            </div>
+            <div id="watch" class="grid-item">
+                <li>
+                    <h2>Watch</h2>
+                </li>
+                <a href="#">What to Watch</a>
+                <a href="#">Latest Trailers</a>
+                <a href="#">IMDb Originals</a>
+                <a href="#">IMDb Picks</a>
+                <a href="#">IMDb Podcasts</a>
+            </div>
+            <div id="community" class="grid-item">
+                <li>
+                    <h2>Community</h2>
+                </li>
+                <a href="#">Help Center </a>
+                <a href="#">Contributor Zone</a>
+                <a href="#">Polls</a>
+            </div>
+        </div>
+    </div>
+    <div id="myLogIn" class="myLogIn">
+        <a  href="javascript:void(0)" class="closebtn" onclick="closeLogIn()"><span id="cross">&times;</span></a>
+        <div class="section">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-self-center py-5">
+                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                            <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                            <label for="reg-log"></label>
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-3d-wrapper">
+                                    <div class="card-front">
+                                        <div class="center-wrap">
+                                            <div class="section text-center">
+                                                <h4 class="mb-4 pb-3">Log In</h4>
+                                                <form method="post" action="login.php">
+                                                <div class="form-group">
+                                                    <input type="email" name="logemail" class="form-style"
+                                                        placeholder="Your Email" id="logemail" autocomplete="off">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="password" name="logpass" class="form-style"
+                                                        placeholder="Your Password" id="logpass" autocomplete="off">
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <a href="#" class="btn mt-4"><span class="submit"><input type="submit" name="submit" value="submit">Submit</span></a>
+                                                <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your
+                                                        password?</a></p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="center-wrap">
+                                            <div class="section text-center">
+                                                <h4 class="mb-4 pb-3">Sign Up</h4>
+                                                <form method="post" action="register.php">
+                                                <div class="form-group">
+                                                    <input type="text" name="logname" class="form-style"
+                                                        placeholder="Your Full Name" id="logname" autocomplete="off">
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="email" name="logemail" class="form-style"
+                                                        placeholder="Your Email" id="logemail" autocomplete="off">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="password" name="logpass" class="form-style"
+                                                        placeholder="Your Password" id="logpass" autocomplete="off">
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <input type="submit" name="submit" value="submit">
+                                                <a href="#" class="btn mt-4"><span class="submit"></span>submit</span></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow">
+        <img class="mySlides" src="images/MoviePosters/avatar.png">
+        <img class="mySlides" src="images/MoviePosters/fastfive.png">
+        <img class="mySlides" src="images/MoviePosters/Tanhaji.png">
+        
+        <button class="w3-button-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+         
+        
+        
+        <script src="imdb.js"></script> 
+
+</body>
+
+</html>
