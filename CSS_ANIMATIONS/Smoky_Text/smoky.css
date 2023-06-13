@@ -1,0 +1,47 @@
+body
+{
+    font-family: sans-serif;
+    background-color:black
+}
+.video-container{
+    height:100%;
+    width: 100%;
+}
+video {
+    position:absolute;
+    max-width: 100%;
+    height: 98%;
+}
+
+
+h1{
+    padding:0px;
+    margin:0px;
+    /* h1 by default might take some padding or margin */
+    font-size: 100px;
+    color: #ddd;
+    position:absolute;
+    top:50%;
+    left:50%;
+    text-align:center;
+    transform: translate(-50%,-50%);
+    letter-spacing: 2px;
+}
+h1 span{
+    opacity: 0;
+    display:inline-block;
+    animation: anim 3s linear forwards;
+    animation-delay: 6s;
+}
+@keyframes anim {
+    0%{
+        opacity:0 ;
+        transform: rotateY(-90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform:rotateY(0deg);
+        filter: blur(0px);
+    }
+}
